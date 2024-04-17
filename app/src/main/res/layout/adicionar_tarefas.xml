@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/tituloAdd"
+        android:layout_width="354dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="35dp"
+        android:clickable="true"
+        android:hint="Título"
+        android:onClick="voltar"
+        app:layout_constraintBottom_toTopOf="@+id/descricaoAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomNavigationView" />
+
+    <EditText
+        android:id="@+id/descricaoAdd"
+        android:layout_width="354dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="1dp"
+        android:hint="Descrição da tarefa"
+        app:layout_constraintBottom_toTopOf="@+id/dataEntrega"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloAdd" />
+
+    <Button
+        android:id="@+id/botaosalvarTarefa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="111dp"
+        android:backgroundTint="#E6C037"
+        android:clickable="true"
+        android:text="Salvar"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dataEntrega" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="413dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="-35dp"
+        android:layout_marginBottom="101dp"
+        app:backgroundTint="#E8DFC1"
+        app:layout_constraintBottom_toTopOf="@+id/tituloAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/botaoVoltar"
+            android:layout_width="75dp"
+            android:layout_height="59dp"
+            android:layout_marginHorizontal="19dp"
+            android:layout_marginVertical="18dp"
+            android:layout_marginTop="187dp"
+            android:layout_marginBottom="95dp"
+            android:clickable="true"
+            android:text="Novo"
+            app:backgroundTint="#E6C037"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            tools:ignore="MissingConstraints" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <EditText
+        android:id="@+id/dataEntrega"
+        android:layout_width="354dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="87dp"
+        android:ems="10"
+        android:hint="Data de entrega"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/botaosalvarTarefa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descricaoAdd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
